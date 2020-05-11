@@ -2,13 +2,18 @@
 using TechTalk.SpecFlow;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
+using BerlinClock.Classes;
+using BerlinClock.Services;
 
 namespace BerlinClock
 {
     [Binding]
     public class TheBerlinClockSteps
-    {
-        private ITimeConverter berlinClock = new TimeConverter();
+    {   
+        //
+        //We should use dependency injection instead of instantiation
+        //
+        private ITimeConverter berlinClock = new TimeConverter(new TimeParsingService(), new TimeConversionService());
         private String theTime;
 
         
