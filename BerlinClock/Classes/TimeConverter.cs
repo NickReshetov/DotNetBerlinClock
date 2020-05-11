@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using BerlinClock.Dtos;
-using BerlinClock.Services;
-using BerlinClock.Services.Interfaces;
+﻿using BerlinClock.Services.Interfaces;
 
 namespace BerlinClock.Classes
 {
